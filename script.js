@@ -167,7 +167,7 @@
     // Typing animation
     const typingBubble = document.createElement('div');
     typingBubble.classList.add('chat-bubble', 'ai-msg', 'typing');
-    typingBubble.textContent = "AR 0-3 is typing...";
+    typingBubble.textContent = "loading...";
     typingBubble.id = "typingBubble";
     chat.appendChild(typingBubble);
 
@@ -191,15 +191,129 @@
 
   function getAIResponse(choice) {
     switch (choice) {
-      case 'Who is CEO Of InPanels?':
-        return 'Kuruto is an CEO of InPanels Company, he selling a panel for whatsapp bot. also the price its very cheap.';
-      case 'Who is DREVVIANN?':
-        return 'DREVVIANN is an logo designer, and web development, also he its partner of the CEO.';
-      case 'Are there any active discounts?':
-        return 'We have no discount active today.';
+      case 'Siapa pemilik AERO-PS?':
+        return '@Satya dan @Faisal adalah pendiri sekaligus founder dari AERO-PS, merekalah yang berjasa untuk membangun server dan memberikan update menarik pada server.';
+      case 'Apa yang diberikan kepada newbie?':
+        return 'Server ini memberikan role staff gratis kepada playernya, dan beberapa assets game yang bernilai cukup tinggi/banyak. dan owner server juga memberikan experience yang bagus sekaligus yang terbaik untuk playernya.';
+      case 'About InPanels':
+        return 'InPanels/InP adalah kelompok website developer yang di bangun oleh @DREVVIANN dan merekalah yang bertanggung jawab untuk membangun website AERO-PS dan memberikan update terbaru untuk kebutuhan website itu sendiri.';
       case 'I got a bug on the website':
-        return 'You can contact us on the Contact Menu on the navigation bar. but we are now on development, Thanks for helping us to finding a bug on the website✨';
+        return 'Jika anda menemukan sebuah bug di dalam website ini anda bisa mengabari team kami lewat group whatsapp/melalui menu contact us, tapi sayangnya contact us sedang dalam pengerjaan oleh tim InPanels.✨';
       default:
         return 'There is an error try again later.';
     }
   }
+  
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyB3sHhVM917EKwEIcU7g7oAztkDhei-Fpc",
+    authDomain: "aero-ps.firebaseapp.com",
+    projectId: "aero-ps",
+    storageBucket: "aero-ps.firebasestorage.app",
+    messagingSenderId: "343832941880",
+    appId: "1:343832941880:web:1e33b70c448d9ed171ddcd"
+  };
+
+
+// Init
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+const stars = document.querySelectorAll('.star');
+const ratingCountEl = document.getElementById('ratingCount');
+const averageRatingDisplay = document.getElementById('averageRatingDisplay');
+
+// Real-time average rating
+firebase.firestore().collection("ratings").onSnapshot(snapshot => {
+  const ratings = [];
+  snapshot.forEach(doc => {
+    const data = doc.data();
+    if (data.rating) ratings.push(data.rating);
+  });
+
+  const totalRatings = ratings.length;
+  const average = ratings.reduce((a, b) => a + b, 0) / totalRatings || 0;
+  const roundedAvg = (Math.round(average * 10) / 10).toFixed(1);
+  averageRatingDisplay.textContent = `${roundedAvg} of ${totalRatings} rating${totalRatings !== 1 ? 's' : ''}`;
+});
+
+stars.forEach((star, index) => {
+  star.addEventListener('mouseover', () => {
+    if (localStorage.getItem('hasRated')) return;
+    highlightStars(index + 1, true);
+  });
+
+  star.addEventListener('mouseout', () => {
+    if (localStorage.getItem('hasRated')) {
+      highlightStars(parseInt(localStorage.getItem('userRating')));
+    } else {
+      resetStars();
+    }
+  });
+
+  star.addEventListener('click', () => {
+    if (localStorage.getItem('hasRated')) {
+      showPopup('error', '❌ You have already rated!');
+      return;
+    }
+
+    const rating = index + 1;
+
+    localStorage.setItem('hasRated', true);
+    localStorage.setItem('userRating', rating);
+
+    db.collection('ratings').add({
+      rating: rating,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }).then(() => {
+      highlightStars(rating);
+      disableStarEvents();
+      showPopup('success', `✅ You rated ${rating} star${rating > 1 ? 's' : ''}`);
+    }).catch((error) => {
+      console.error("Error saving to Firestore:", error);
+      showPopup('error', '⚠️ Failed to submit rating.');
+    });
+  });
+});
+
+function disableStarEvents() {
+  stars.forEach(star => {
+    star.style.pointerEvents = 'none'; // disables all interaction
+    star.classList.remove('hovered');  // remove hover effect if any
+    star.classList.add('disabled');
+  });
+}
+
+function highlightStars(count, isHover = false) {
+  stars.forEach((star, i) => {
+    if (i < count) {
+      star.classList.add(isHover ? 'hovered' : 'selected');
+      if (!isHover) star.classList.remove('hovered');
+    } else {
+      star.classList.remove('hovered', 'selected');
+    }
+  });
+}
+
+function resetStars() {
+  stars.forEach(star => {
+    star.classList.remove('hovered', 'selected');
+  });
+}
+
+
+function showPopup(type, message) {
+  const popup = document.getElementById(`${type}Popup`);
+  popup.textContent = message;
+  popup.classList.add('show');
+
+  setTimeout(() => {
+    popup.classList.remove('show');
+  }, 3000);
+}
+
+const hasRated = localStorage.getItem('hasRated');
+if (hasRated) {
+  highlightStars(parseInt(localStorage.getItem('userRating')));
+}

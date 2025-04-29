@@ -110,42 +110,45 @@
         </div>
     </div>
 
-    <h1 class="faq-title"><i class="ri-message-2-fill"></i> FAQ</h1>
+    <div class="rating-container">
+        <h2>Ratings</h2>
+        <div class="stars" id="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <div id="averageRatingDisplay" class="rating-summary">0.0 of 0 ratings</div>
+      </div>
+      
+      <!-- Popups -->
+     <div id="successPopup" class="popup-message success">✅ Rating submitted successfully!</div>
+     <div id="errorPopup" class="popup-message error">❌ You have already rated!</div>
 
-    <div class="faq-wrapper">
-    <div class="faq-container">
-        <img class="faq-profile" src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" alt="">
-        <h3>DREVVIANN <i class="ri-verified-badge-fill"></i></h3>
-    </div>
+    <h1 class="faq-title"><i class="ri-message-2-fill"></i> FAQ</h1>
 
     <div class="faq-container">
         <p class="faq-description">
             <span class="question">Are GTPS Safe?</span> <br>
-            As soon as you dont use your real growtopia growid and password, it will be fine.
+            As soon as you dont use your real growtopia growid and password, it will be fine. <br>
+            ~ DREVVIANN<i class="ri-verified-badge-fill"></i>
         </p>
-    </div>
-
-    <div class="faq-container">
-        <img class="faq-profile" src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" alt="">
-        <h3>DREVVIANN <i class="ri-verified-badge-fill"></i></h3>
     </div>
 
     <div class="faq-container">
         <p class="faq-description">
             <span class="question">Why i can't access the server?</span> <br>
-            The server could be down or the owner may not have updated the host address.
+            The server could be down or the owner may not have updated the host address. <br>
+            ~ DREVVIANN<i class="ri-verified-badge-fill"></i>
         </p>
-    </div>
-    
-    <div class="faq-container">
-        <img class="faq-profile" src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" alt="">
-        <h3>DREVVIANN <i class="ri-verified-badge-fill"></i></h3>
     </div>
 
     <div class="faq-container">
         <p class="faq-description">
             <span class="question">How to logout from gtps?</span> <br>
-            It’s really easy – on Android just turn off the host, on iOS turn off the Surge host, and on PC remove it from your host file.
+            It’s really easy – on Android just turn off the host, on iOS <br> turn off the Surge host, and on PC remove it from your host file. <br>
+            ~ DREVVIANN<i class="ri-verified-badge-fill"></i>
         </p>
     </div>
     </div>
@@ -165,14 +168,18 @@
         </div>
           </div>
           <div class="choice-buttons" id="choiceButtons">
-          <button onclick="selectOption('undefined')">✨ Coming soon.</button>
-          <button onclick="selectOption('undefined')">✨ Coming soon.</button>
-          <button onclick="selectOption('undefined')">Coming soon.</button>
+          <button onclick="selectOption('Siapa pemilik AERO-PS?')">✨ Siapa pemilik AERO-PS?</button>
+          <button onclick="selectOption('Apa yang diberikan kepada newbie?')">✨ Apa yang diberikan kepada newbie?</button>
+          <button onclick="selectOption('About InPanels')">About InPanels</button>
           <button onclick="selectOption('I got a bug on the website')">I got a bug on the website</button>
           </div>
       </div>
 
     
+    <!-- Firebase App (compat version) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
