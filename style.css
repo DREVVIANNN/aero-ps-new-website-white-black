@@ -544,7 +544,7 @@
   
   .chat-body {
     padding: 10px;
-    height: 250px;
+    height: 280px;
     overflow-y: auto;
     font-size: 14px;
     color: #333;
@@ -778,8 +778,7 @@
     }
 
     .chat-popup{
-      width: 250px;
-      height: 420px;
+      width: 280px;
     }
 
     .ri-search-line{
