@@ -2,6 +2,11 @@
 const messages = [
     {
       sender: "DREVVIANN",
+      preview: "Upcoming big update to our...",
+      full: "Upcoming big update to our official website, we are now on development to make this web perform. thanks for all support to our team"
+    },
+    {
+      sender: "DREVVIANN",
       preview: "We are now doing a big...",
       full: "We are now doing a big update to our website for version 1.13!"
     },
@@ -28,7 +33,7 @@ const messages = [
     notification.className = 'notification';
     notification.style.animationDelay = `${index * 0.2}s`; // stagger effect
     notification.innerHTML = `
-      <div class="sender">${msg.sender}</div>
+      <div class="sender">${msg.sender}<i class="ri-verified-badge-fill"></i></div>
       <div class="preview">${msg.preview}</div>
     `;
   

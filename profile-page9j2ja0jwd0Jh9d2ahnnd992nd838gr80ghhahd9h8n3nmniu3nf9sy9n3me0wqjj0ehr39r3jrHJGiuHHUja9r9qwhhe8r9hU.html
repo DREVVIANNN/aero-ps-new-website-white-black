@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERO-PS | Official Website X InPanels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="shortcut icon" href="assets/img/aeroicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <!--<img src="375593064_778731280602001_6601361369208148137_n.png" oncontextmenu="return false;" alt="Protected Image">-->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+        <img src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" oncontextmenu="return false;" alt="Logo" class="logo">
+        <input id="search-input" type="text" placeholder="Search..." class="search-bar">
+        <i class="ri-search-line"></i>
+        </div>
+    
+        <div class="nav-right">
+        <div class="icon notif">
+            <a href="notification-page93hhd972hiyqenn2hn1e2mm18j2ne82h2y381ydhgd372ajpLH8Gh2hg.html">
+                <img src="assets/img/notification-line.png" alt="notification">
+            </a>
+        </div>
+        <div class="icon profile">
+            <a href="">
+            <img class="profile" src="assets/img/aeroicon.jpg" alt="">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        </div>
+    </nav>
+    
+    <!-- Sidebar Menu -->
+    <div class="side-menu" id="sideMenu">
+        <img class="logo-sidebar" oncontextmenu="return false;" src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" alt="logo">
+        <ul>
+        <li>Home</li>
+        <li><a href="notification-page93hhd972hiyqenn2hn1e2mm18j2ne82h2y381ydhgd372ajpLH8Gh2hg.html">Notification</a></li>
+        <li><a href="#">Game</a></li>
+        </ul>
+    </div>
+    
+    <!-- Content Area -->
+    <div class="content" id="content">
+        <div class="home-image">
+            <img src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" alt="image" class="home-img">
+        </div>
+        <h1 class="home-title">Coming Soon.</h1>
+        <p style="text-align: center;">Description: None.</p>
+    </div>
+
+     <!-- Chat trigger -->
+     <button class="chat-btn" onclick="toggleChat()">💬 Ask AR</button>
+
+     <!-- Chat popup -->
+      <div class="chat-popup" id="chatBox">
+         <div class="chat-header">
+            <img src="assets/img/aeroicon.gif" alt="AR 0-3" class="ai-avatar">
+            <span>AR 0-3</span>
+          </div>             
+          <div class="chat-body" id="chatMessages">
+          <div class="chat-bubble ai-msg">
+            Hi there! What would you like to know?
+        </div>
+          </div>
+          <div class="choice-buttons" id="choiceButtons">
+          <button onclick="selectOption('Siapa pemilik AERO-PS?')">✨ Siapa pemilik AERO-PS?</button>
+          <button onclick="selectOption('Apa yang diberikan kepada newbie?')">✨ Apa yang diberikan kepada newbie?</button>
+          <button onclick="selectOption('About InPanels')">About InPanels</button>
+          <button onclick="selectOption('I got a bug on the website')">I got a bug on the website</button>
+          </div>
+      </div>
+
+    
+    <!-- Firebase App (compat version) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
