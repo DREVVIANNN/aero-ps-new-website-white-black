@@ -171,6 +171,109 @@
     font-weight: 500;
   }
 
+  .leaderboard-container{
+    background-color: #fff;
+    display: grid;
+    justify-self: center;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px #e6e6e6;
+  }
+
+  .title-leader-wrapper{
+    display: flex;
+  }
+
+  .leaderboard-title{
+    font-size: 17px;
+  }
+
+  .leaderboard-title-2{
+    font-size: 15px;
+    color: #888;
+    margin-left: 9.9rem;
+  }
+  .leaderboard-title-3{
+    font-size: 15px;
+    color: #888;
+    margin-left: 8.8rem;
+  }
+
+  .list-world-img-wrapper{
+    display: flex;
+    width: 380px;
+    justify-self: center;
+    overflow-x: auto;
+  }
+
+  .list-world-img img{
+    width: 380px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0px 4px 10px #e6e6e6;
+  }
+
+  li{
+    list-style: none;
+  }
+
+  .list-winner{
+    display: flex;
+  }
+
+  .list-player{
+    margin-top: 0.5rem;
+  }
+  .world-name{
+    margin-top: 0.5rem;
+    margin-left: 10.5rem;
+    font-weight: bold;
+  }
+
+  .list-player-2,
+  .list-player-3,
+  .list-player-4,
+  .list-player-5{
+    margin-top: 0.35rem;
+  }
+
+  .world-name-2,
+  .world-name-3,
+  .world-name-4,
+  .world-name-5{
+    font-weight: bold;
+    margin-top: 0.35rem;
+    margin-left: 10.5rem;
+  }
+
+  .copyright-event{
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .profile-image{
+    display: flex;
+    justify-self: center;
+    margin-bottom: 1rem;
+  }
+
+  .profile-img{
+    width: 64px;
+    border-radius: 50%;
+    margin-top: 1rem;
+    margin: 6.5px;
+    justify-self: center;
+    box-shadow: 0px 5px 9px #888;
+  }
+  .profile-img2{
+    width: 64px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0px 5px 9px #888;
+  }
   .home-img{
     width: 64px;
     border-radius: 50%;
@@ -192,10 +295,6 @@
     display: inline-block;
     opacity: 1;
     transition: opacity 0.3s;
-  }
-
-  .verified-user{
-    width: 10px;
   }
 
   .item-wrapper{
@@ -627,7 +726,6 @@
     background-color: #fff;
     padding: 10px;
     margin: 10px;
-    user-select: none;
     font-size: 10px;
     justify-self: center;
     border-radius: 5px;
@@ -766,6 +864,8 @@
     }
   }
 
+  
+
   @media (max-width: 460px) {
     .search-bar{
         width: 100px;
@@ -797,6 +897,45 @@
       font-size: 15px;
       text-align: center;
       width: 280px;
+    }
+
+    .leaderboard-container{
+      width: 300px;
+    }
+
+    .leaderboard-title-2{
+      margin-left: 3.7rem;
+    }
+    .leaderboard-title-3{
+      margin-left: 2.8rem;
+    }
+  
+    .list-world-img-wrapper{
+      width: 283px;
+    }
+  
+    .list-world-img img{
+      width: 285px;
+    }
+
+    .world-name{
+      font-weight: bold;
+      margin-left: 4.5rem;
+    }
+  
+    .list-player-2,
+    .list-player-3,
+    .list-player-4,
+    .list-player-5{
+      margin-top: 0.3rem;
+    }
+  
+    .world-name-2,
+    .world-name-3,
+    .world-name-4,
+    .world-name-5{
+      margin-left: 4.5rem;
+      font-weight: bold;
     }
   }
 

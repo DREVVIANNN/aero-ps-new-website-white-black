@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERO-PS | Official Website X InPanels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="shortcut icon" href="assets/img/aeroicon.jpg" type="image/x-icon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8114226943532527"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--<img src="375593064_778731280602001_6601361369208148137_n.png" oncontextmenu="return false;" alt="Protected Image">-->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+        <img src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" oncontextmenu="return false;" alt="Logo" class="logo">
+        <input id="search-input" type="text" placeholder="Search..." class="search-bar">
+        <i class="ri-search-line"></i>
+        </div>
+    
+        <div class="nav-right">
+        <div class="icon notif">
+            <a href="notification-page93hhd972hiyqenn2hn1e2mm18j2ne82h2y381ydhgd372ajpLH8Gh2hg.html">
+                <img src="assets/img/notification-line.png" alt="notification">
+            </a>
+        </div>
+        <div class="icon profile">
+            <a href="profile-page9j2ja0jwd0Jh9d2ahnnd992nd838gr80ghhahd9h8n3nmniu3nf9sy9n3me0wqjj0ehr39r3jrHJGiuHHUja9r9qwhhe8r9hU.html">
+            <img class="profile" src="assets/img/aeroicon.jpg" alt="">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        </div>
+    </nav>
+    
+    <!-- Sidebar Menu -->
+    <div class="side-menu" id="sideMenu">
+        <img class="logo-sidebar" oncontextmenu="return false;" src="assets/img/inpanelslogoanimationloading-ezgif.com-video-to-gif-converter.gif" alt="logo">
+        <ul>
+        <li><a href="https://www.aero-ps.site">Home</a></li>
+        <li><a href="notification-page93hhd972hiyqenn2hn1e2mm18j2ne82h2y381ydhgd372ajpLH8Gh2hg.html">Notification</a></li>
+        <li>Leaderboard</a></li>
+        </ul>
+    </div>
+    
+    <!-- Content Area -->
+    <div class="content" id="content">
+        <h1 class="home-title">Leaderboard</h1>
+
+        <div class="leaderboard-container">
+            <div class="title-leader-wrapper">
+                <h2 class="leaderboard-title">Leaderboard</h2>
+                <h2 class="leaderboard-title-2">Category: Design</h2>
+            </div>
+
+            <hr>
+
+            <div class="list-winner">
+                <ul>
+                    <li class="list-player">1. DREVVIANN</li>
+                    <li class="list-player-2">2. ???</li>
+                    <li class="list-player-3">3. ???</li>
+                    <li class="list-player-4">4. ???</li>
+                    <li class="list-player-5">5. ???</li>
+                </ul>
+                <ul>
+                    <li class="world-name">DREVVIANN</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="leaderboard-container">
+            <div class="title-leader-wrapper">
+                <h2 class="leaderboard-title">World Winner</h2>
+                <h2 class="leaderboard-title-3">Category: Winner</h2>
+            </div>
+
+            <hr>
+
+            <div class="list-winner">
+                <ul class="list-world-img-wrapper">
+                    <li class="list-world-img"><img src="assets/img/quality_restoration_20250502114753373.png" alt=""></li>
+                    <li class="list-world-img"><img src="assets/img/quality_restoration_20250502114753373.png" alt=""></li>
+                    <li class="list-world-img"><img src="assets/img/quality_restoration_20250502114753373.png" alt=""></li>
+                    <li class="list-world-img"><img src="assets/img/quality_restoration_20250502114753373.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="leaderboard-container">
+            <p class="copyright-event">
+                Event By: <strong>koneid, dapaurfav</strong><br>
+                Starting On: <strong>Unknown</strong>
+            </p>
+        </div>
+    </div>
+
+     <!-- Chat trigger -->
+     <button class="chat-btn" onclick="toggleChat()">💬 Ask AR</button>
+
+     <!-- Chat popup -->
+      <div class="chat-popup" id="chatBox">
+         <div class="chat-header">
+            <img src="assets/img/aeroicon.gif" alt="AR 0-3" class="ai-avatar">
+            <span>AR 0-3</span>
+          </div>             
+          <div class="chat-body" id="chatMessages">
+          <div class="chat-bubble ai-msg">
+            Hi there! What would you like to know?
+        </div>
+          </div>
+          <div class="choice-buttons" id="choiceButtons">
+          <button onclick="selectOption('Siapa pemilik AERO-PS?')">✨ Siapa pemilik AERO-PS?</button>
+          <button onclick="selectOption('Apa yang diberikan kepada newbie?')">✨ Apa yang diberikan kepada newbie?</button>
+          <button onclick="selectOption('About InPanels')">About InPanels</button>
+          <button onclick="selectOption('I got a bug on the website')">I got a bug on the website</button>
+          </div>
+      </div>
+
+    
+    <!-- Firebase App (compat version) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
