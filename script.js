@@ -317,3 +317,25 @@ const hasRated = localStorage.getItem('hasRated');
 if (hasRated) {
   highlightStars(parseInt(localStorage.getItem('userRating')));
 }
+
+
+const container = document.getElementById("scrollContainer");
+    const track = document.getElementById("scrollTrack");
+
+    // Duplicate track content for seamless looping
+    track.innerHTML += track.innerHTML;
+
+    let scrollSpeed = 1;
+
+    function autoScroll() {
+      container.scrollLeft += scrollSpeed;
+
+      // Reset scroll if reached the duplicated end
+      if (container.scrollLeft >= track.scrollWidth / 2) {
+        container.scrollLeft = 0;
+      }
+
+      requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();

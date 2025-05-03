@@ -299,6 +299,8 @@
 
   .item-wrapper{
     display: flex;
+    justify-self: center;
+    width: 450px;
     overflow-x: auto;
   }
   .item-wrapper-btn{
@@ -865,6 +867,91 @@
   }
 
   
+  p.subheading {
+    text-align: center;
+    color: #444;
+    margin-bottom: 30px;
+  }
+
+  .scroll-container {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    justify-self: center;
+    width: 450px;
+    margin-bottom: 5rem;
+    padding: 20px 0;
+  }
+
+  .scroll-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 30s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .team-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    transition: 0.8s;
+  }
+
+  .team-card:hover{
+    transform: translateY(-5px);
+  }
+
+  .team-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .team-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+  }
+
+  .team-card p {
+    margin: 0 0 10px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  .team-btn{
+    background-color: #000;
+    padding: 10px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.8s;
+  }
+
+  .team-btn:hover{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 4px 8px #e6e6e6;
+  }
+
+  .server-title{
+    text-align: center;
+    margin-top: 2rem;
+  }
 
   @media (max-width: 460px) {
     .search-bar{
@@ -937,10 +1024,19 @@
       margin-left: 4.5rem;
       font-weight: bold;
     }
+
+    .scroll-container{
+      width: 300px;
+    }
+
+    .item-wrapper{
+      width: 300px;
+    }
   }
 
   @media (min-width: 1100px) {
     .item-wrapper{
+      width: 1070px;
         justify-self: center;
     }
 
@@ -967,6 +1063,10 @@
     .rating-container{
       margin-right: 36.8rem;
       width: 465px;
+    }
+
+    .scroll-container{
+      width: 1040px;
     }
   }
 
