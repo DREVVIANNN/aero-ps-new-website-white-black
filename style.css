@@ -1072,6 +1072,10 @@
     .item-wrapper{
       width: 300px;
     }
+
+    .profile-container{
+      width: 300px;
+    }
   }
 
   @media (min-width: 1100px) {
@@ -1106,6 +1110,10 @@
     }
 
     .scroll-container{
+      width: 1040px;
+    }
+
+    .profile-container{
       width: 1040px;
     }
   }
