@@ -318,24 +318,14 @@ if (hasRated) {
   highlightStars(parseInt(localStorage.getItem('userRating')));
 }
 
+function banUser() {
+  const overlay = document.getElementById('overlay');
 
-const container = document.getElementById("scrollContainer");
-    const track = document.getElementById("scrollTrack");
+  // Show the overlay and hide the main content
+  overlay.style.display = 'flex';
 
-    // Duplicate track content for seamless looping
-    track.innerHTML += track.innerHTML;
-
-    let scrollSpeed = 1;
-
-    function autoScroll() {
-      container.scrollLeft += scrollSpeed;
-
-      // Reset scroll if reached the duplicated end
-      if (container.scrollLeft >= track.scrollWidth / 2) {
-        container.scrollLeft = 0;
-      }
-
-      requestAnimationFrame(autoScroll);
-    }
-
-    autoScroll();
+  // After 5 seconds, restore everything
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 5000);
+}
