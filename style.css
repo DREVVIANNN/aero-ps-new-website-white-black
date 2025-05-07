@@ -1037,22 +1037,6 @@
     color: #555;
   }
 
-  #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-
   @media (max-width: 460px) {
     .search-bar{
         width: 100px;
@@ -1082,10 +1066,16 @@
 
     .wrapper{
       width: 330px;
+      height: 150px;
       margin-top: 2.5rem;
     }
     .character-img{
-      height: 200px;
+      height: 250px;
+      left: -20px;
+    }
+
+    .wrapper p{
+      font-size: 10px;
     }
 
     .popup-message{

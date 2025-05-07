@@ -113,6 +113,7 @@
     
     // Start the animation
     typeWriter();
+  
 
   function copyToClipboard(elementId, button) {
     const text = document.getElementById(elementId).textContent;
@@ -316,16 +317,4 @@ function showPopup(type, message) {
 const hasRated = localStorage.getItem('hasRated');
 if (hasRated) {
   highlightStars(parseInt(localStorage.getItem('userRating')));
-}
-
-function banUser() {
-  const overlay = document.getElementById('overlay');
-
-  // Show the overlay and hide the main content
-  overlay.style.display = 'flex';
-
-  // After 5 seconds, restore everything
-  setTimeout(() => {
-    overlay.style.display = 'none';
-  }, 5000);
 }
