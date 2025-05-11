@@ -1118,6 +1118,7 @@
     border: none;
     color: red;
     font-size: 19px;
+    border-radius: 5px;
     cursor: pointer;
   }
 
@@ -1245,7 +1246,15 @@
     }
 
     .post-container{
-      width: 350px;
+      width: 330px;
+    }
+
+    .btn-container button{
+      font-size: 15px;
+    }
+
+    .counter{
+      font-size: 13px;
     }
   }
 
