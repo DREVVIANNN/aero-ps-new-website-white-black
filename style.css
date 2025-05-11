@@ -22,6 +22,7 @@
     background-color: #fff;
     padding: 10px 20px;
     display: flex;
+    border-radius: 50px;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -358,6 +359,55 @@
   ::-webkit-scrollbar-thumb{
     background-color: #333;
     width: 5px;
+  }
+
+  .scroller-wrapper {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 450px;
+    justify-self: center;
+    margin-bottom: 1rem;
+  }
+
+  .brand-scroller {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+  }
+
+  .brand-item {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .brand-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .scrolling-track {
+    display: flex;
+    animation: scrollLeft linear infinite;
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .item-container{
@@ -1134,6 +1184,10 @@
     .profile-container{
       width: 300px;
     }
+
+    .scroller-wrapper{
+      width: 325px;
+    }
   }
 
   @media (min-width: 1100px) {
@@ -1177,6 +1231,10 @@
 
     .profile-container{
       width: 1040px;
+    }
+
+    .scroller-wrapper{
+      width: 1050px;
     }
   }
 

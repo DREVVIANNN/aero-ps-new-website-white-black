@@ -33,7 +33,7 @@ const messages = [
     notification.className = 'notification';
     notification.style.animationDelay = `${index * 0.2}s`; // stagger effect
     notification.innerHTML = `
-      <div class="sender">${msg.sender}<i class="ri-verified-badge-fill"></i></div>
+      <div class="sender"><img width="10px" src="assets/img/inverted_image.jpg" alt="InPanels Logo"> ${msg.sender}<i class="ri-verified-badge-fill"></i></div>
       <div class="preview">${msg.preview}</div>
     `;
   

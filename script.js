@@ -318,3 +318,12 @@ const hasRated = localStorage.getItem('hasRated');
 if (hasRated) {
   highlightStars(parseInt(localStorage.getItem('userRating')));
 }
+
+// Dynamically set animation duration based on content width
+const track = document.getElementById('scrollTrack');
+const totalWidth = track.scrollWidth / 2; // only original part
+const kecepatan = 50; // pixels per second
+
+// Set animation duration
+const duration = totalWidth / kecepatan; // seconds
+track.style.animationDuration = `${duration}s`;
