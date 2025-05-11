@@ -1117,7 +1117,7 @@
     background-color: transparent;
     border: none;
     color: red;
-    font-size: 19px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
   }
@@ -1136,7 +1136,7 @@
 
   .counter{
     color: #000;
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .profile-user-container h5{
