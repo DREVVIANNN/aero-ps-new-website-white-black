@@ -327,3 +327,22 @@ const kecepatan = 50; // pixels per second
 // Set animation duration
 const duration = totalWidth / kecepatan; // seconds
 track.style.animationDuration = `${duration}s`;
+
+const shareBtn = document.getElementById('shareBtn');
+
+shareBtn.addEventListener('click', async () => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: 'Check out this page!',
+        url: window.location.href
+      });
+      console.log('Shared successfully');
+    } catch (err) {
+      console.error('Share failed:', err.message);
+    }
+  } else {
+    alert('Sharing not supported in this browser.');
+  }
+});

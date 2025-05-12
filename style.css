@@ -1113,13 +1113,20 @@
     margin-bottom: 0.4rem;
   }
 
+  .btn-container .ri-heart-fill{
+    color: red;
+  }
+
   .btn-container button{
     background-color: transparent;
     border: none;
-    color: red;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .list-posted{
+    justify-self: center;
   }
 
   .profile-user-container{
