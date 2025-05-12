@@ -346,3 +346,7 @@ shareBtn.addEventListener('click', async () => {
     alert('Sharing not supported in this browser.');
   }
 });
+
+function onDevelopment() {
+  alert("disabled for a while...")
+}

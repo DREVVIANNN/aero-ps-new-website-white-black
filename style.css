@@ -1117,12 +1117,21 @@
     color: red;
   }
 
+  #likeCount{
+    font-size: 15px;
+  }
+
   .btn-container button{
     background-color: transparent;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .check-news{
+    color: green;
+    text-decoration: underline;
   }
 
   .list-posted{
@@ -1257,7 +1266,7 @@
     }
 
     .btn-container button{
-      font-size: 15px;
+      font-size: 20px;
     }
 
     .counter{
