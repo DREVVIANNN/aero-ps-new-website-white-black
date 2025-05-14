@@ -235,4 +235,14 @@ document.getElementById('shareButtonWhatsApp3').addEventListener('click', functi
     shareToWhatsApp(shareData3.message, shareData3.url);
 });
 
+const sheet = document.getElementById('bottomSheet');
+
+function openSheet() {
+  sheet.classList.add('active');
+}
+
+function closeSheet() {
+  sheet.classList.remove('active');
+}
+
 
