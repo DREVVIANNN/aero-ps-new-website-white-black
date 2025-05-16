@@ -215,6 +215,10 @@ const shareData3 = {
     message: 'InPanels X AERO-PS',
     url: 'https://www.aero-ps.site/our-post-pageH62hHdGdt7g32gdg987g32gdg2FFDth298-dh829&h92@9yd8ge.html'
 };
+const shareData4 = {
+    message: 'Reedem Code For Newbie',
+    url: 'https://www.inpanels.site'
+};
 
 // Function to share on WhatsApp
 function shareToWhatsApp(message, url) {
@@ -233,6 +237,9 @@ document.getElementById('shareButtonWhatsApp2').addEventListener('click', functi
 
 document.getElementById('shareButtonWhatsApp3').addEventListener('click', function() {
     shareToWhatsApp(shareData3.message, shareData3.url);
+});
+document.getElementById('shareButtonWhatsApp4').addEventListener('click', function() {
+    shareToWhatsApp(shareData4.message, shareData4.url);
 });
 
 const sheet = document.getElementById('bottomSheet');
